@@ -1,0 +1,66 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar (Flexbox) */
+nav {
+    background: #be6760;
+    color: #f4d6ab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+    margin: 0 10px;
+}
+.nav-links a {
+    color: #f4d6ab;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* content Layout (CSS Grid)*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.box {
+    background: #dc9d87;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+}
+
+
+/* Responsive Design (Media Queries)*/
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
